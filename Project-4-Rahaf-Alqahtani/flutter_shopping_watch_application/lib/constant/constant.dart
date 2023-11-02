@@ -41,7 +41,7 @@ const SizedBox height34 = SizedBox(height: 34);
 const SizedBox height36 = SizedBox(height: 36);
 const SizedBox height38 = SizedBox(height: 38);
 const SizedBox height40 = SizedBox(height: 40);
-const SizedBox height42 = SizedBox(height: 42);
+const SizedBox height41 = SizedBox(height: 41);
 
 const Color appColorYellow = Color(0xfff4ca7f);
 const Color appColorGrey = Color(0xfff3f3f3);
