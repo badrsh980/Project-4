@@ -9,7 +9,7 @@ class MyWidget extends StatelessWidget {
       child: Scaffold(
         body: Text(
           "logo page",
-          style: TextStyle(fontSize: 00),
+          style: TextStyle(fontSize: 20),
         ),
       ),
     );
