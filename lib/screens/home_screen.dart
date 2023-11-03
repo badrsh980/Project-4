@@ -5,13 +5,8 @@ class MyWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SafeArea(
-      child: Scaffold(
-        body: Text(
-          "logo page",
-          style: TextStyle(fontSize: 20),
-        ),
-      ),
+    return SafeArea(
+      child: Scaffold(),
     );
   }
 }
