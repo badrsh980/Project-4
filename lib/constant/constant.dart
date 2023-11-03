@@ -43,8 +43,10 @@ const SizedBox height38 = SizedBox(height: 38);
 const SizedBox height40 = SizedBox(height: 40);
 
 const Color appColorYellow = Color(0xfff4ca7f);
-const Color appColorGrey = Color(0xfff3f3f3);
-const Color appColorDarkGrey = Color(0xff8e8b8b);
+const Color appColorWhite = Color(0xffffffff);
+const Color appColorDarkWhite = Color(0xfff3f3f3);
+const Color appColorGrey = Color(0xff8e8b8b);
+const Color appColorDarkGrey = Color(0xff2c3341);
 const Color appColorBlue = Color(0xff283a64);
 const Color appColorDarkBlue = Color(0xff10141c);
 const Color appColorGreen = Color(0xff7fc28e);

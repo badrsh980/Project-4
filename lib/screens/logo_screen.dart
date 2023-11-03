@@ -1,13 +1,33 @@
 import 'package:flutter/material.dart';
+import 'package:project4/constant/constant.dart';
+import 'package:project4/widgets/logo_widget/logo_page_view.dart';
 
-class MyWidget extends StatelessWidget {
-  const MyWidget({super.key});
+class LogoScreen extends StatelessWidget {
+  const LogoScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const SafeArea(
+    return SafeArea(
       child: Scaffold(
-        body: Text("logo page"),
+        body: PageView(
+          children: const [
+            LogoPageView(
+              swipeColorFirst: appColorYellow,
+              swipeColorSecond: appColorDarkGrey,
+              swipeColorTheird: appColorDarkGrey,
+            ),
+            LogoPageView(
+              swipeColorFirst: appColorDarkGrey,
+              swipeColorSecond: appColorYellow,
+              swipeColorTheird: appColorDarkGrey,
+            ),
+            LogoPageView(
+              swipeColorFirst: appColorDarkGrey,
+              swipeColorSecond: appColorDarkGrey,
+              swipeColorTheird: appColorYellow,
+            ),
+          ],
+        ),
       ),
     );
   }
