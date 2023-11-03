@@ -48,5 +48,3 @@ const Color appColorDarkGrey = Color(0xff8e8b8b);
 const Color appColorBlue = Color(0xff283a64);
 const Color appColorDarkBlue = Color(0xff10141c);
 const Color appColorGreen = Color(0xff7fc28e);
-
-
