@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:project4/Data/global.dart';
+import 'package:project4/Model/User_model.dart';
+import 'package:project4/screens/login_screen.dart';
 import 'package:project4/widgets/login_widget/description_text_screen.dart';
 import 'package:project4/widgets/login_widget/first_text_ADS_watch.dart';
 import 'package:project4/widgets/login_widget/sign_in_buttom.dart';
@@ -12,6 +15,8 @@ class SignUpContentWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isMatched = false;
+
     TextEditingController usernameController = TextEditingController();
     TextEditingController passwordController = TextEditingController();
     TextEditingController fullNameController = TextEditingController();
@@ -59,8 +64,43 @@ class SignUpContentWidget extends StatelessWidget {
           ),
           //---------------------------------
           height14,
-          const ButtomWidget(
+          ButtomWidget(
             textButtom: 'Sign up',
+            onPressed: () {
+              populateUserList();
+              if (usernameController.text.isNotEmpty &&
+                  fullNameController.text.isNotEmpty &&
+                  passwordController.text.isNotEmpty) {
+                for (var user in userList) {
+                  if (user.username == usernameController.text) {
+                    isMatched = true;
+                  }
+                }
+                if (!isMatched) {
+                  User newUser = User(
+                    fullName: fullNameController.text,
+                    username: usernameController.text,
+                    password: passwordController.text,
+                    emailAddress: "www@الكمال لله",
+                    img: "assets/images/watches/watch1.jpg",
+                  );
+                  userList.add(newUser);
+
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const LoginScreen(),
+                      ));
+                } else {
+                  isMatched = false;
+                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                      content: Text("Email or Username are used")));
+                }
+              } else {
+                ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                    content: Text("Please insert all text fields")));
+              }
+            },
           ),
           //----------------------------------
           height32,

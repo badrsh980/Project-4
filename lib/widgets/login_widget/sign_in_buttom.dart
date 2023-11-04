@@ -3,9 +3,14 @@ import 'package:project4/constant/constant.dart';
 import 'package:project4/screens/nav_bar_screen.dart';
 
 class ButtomWidget extends StatelessWidget {
-  const ButtomWidget({super.key, required this.textButtom});
+  const ButtomWidget({
+    super.key,
+    required this.textButtom,
+    required this.onPressed,
+  });
 
   final String textButtom;
+  final Function() onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -15,16 +20,7 @@ class ButtomWidget extends StatelessWidget {
       ),
       child: Center(
         child: InkWell(
-          onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) {
-                  return NavBar();
-                },
-              ),
-            );
-          },
+          onTap: onPressed,
           child: Container(
             height: 50,
             width: 360,
