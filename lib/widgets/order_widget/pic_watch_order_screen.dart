@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project4/Data/global.dart';
 import 'package:project4/constant/constant.dart';
 
 class PicWatchOrderScreen extends StatelessWidget {
@@ -29,7 +30,7 @@ class PicWatchOrderScreen extends StatelessWidget {
           left: 10,
           child: Center(
               child: Image.asset(
-            "assets/images/watches/watch4.jpg",
+            "assets/images/watches/watch3.jpg",
             height: 70,
             width: 70,
           )),

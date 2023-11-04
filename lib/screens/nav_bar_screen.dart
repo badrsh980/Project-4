@@ -31,7 +31,7 @@ class _NavBar extends State<NavBar> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    var anim = AnimationController(
+    AnimationController(
       vsync: this,
       value: 1,
       duration: const Duration(milliseconds: 300),

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:project4/Model/watch_product_model.dart';
 import 'package:project4/constant/constant.dart';
 
 class WatchPic extends StatelessWidget {
-  const WatchPic({super.key});
+  const WatchPic({super.key, required this.watch});
+  final Watch watch;
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +28,7 @@ class WatchPic extends StatelessWidget {
         Positioned(
           top: 100,
           left: 75,
-          child: Center(child: Image.asset("assets/images/watches/watch4.jpg")),
+          child: Center(child: Image.asset(watch.picture)),
         )
       ],
     );

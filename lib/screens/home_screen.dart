@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:project4/Data/global.dart';
-import 'package:project4/Data/watch_datasets.dart';
-import 'package:project4/Model/watch_product_model.dart';
 import 'package:project4/constant/constant.dart';
 import 'package:project4/widgets/home_widget/app_bar_home_screen.dart';
 import 'package:project4/widgets/home_widget/shopping_categories.dart';
