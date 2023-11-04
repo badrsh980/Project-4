@@ -5,7 +5,6 @@ import 'package:project4/screens/watch_info_screen.dart';
 
 class DispalyAllWatch extends StatelessWidget {
   const DispalyAllWatch({super.key, required this.watch});
-
   final Watch watch;
 
   @override
@@ -13,7 +12,9 @@ class DispalyAllWatch extends StatelessWidget {
     return InkWell(
       onTap: () {
         Navigator.push(context, MaterialPageRoute(builder: (context) {
-          return WatchInfoScreen();
+          return WatchInfoScreen(
+            watch: watch,
+          );
         }));
       },
       child: Stack(
@@ -83,17 +84,3 @@ class DispalyAllWatch extends StatelessWidget {
     );
   }
 }
-
-
-
-// Container(
-//       height: 300,
-//       width: 100,
-//       color: appColorColdGrey,
-//       child: Column(
-//         children: [
-//           Image.asset(watch.picture),
-//           Text(watch.name),
-//           Text(watch.price.toString())
-//         ],
-//       ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project4/Data/global.dart';
 import 'package:project4/constant/constant.dart';
 
 class WatchInfoOrderScreen extends StatelessWidget {
@@ -6,13 +7,13 @@ class WatchInfoOrderScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  const SizedBox(
+    return const SizedBox(
       width: 200,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "watch name",
+            "",
             style: TextStyle(
                 fontFamily: "PlayfairDisplay",
                 color: appColorBlue,

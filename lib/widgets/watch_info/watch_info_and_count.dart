@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:project4/Model/watch_product_model.dart';
 import 'package:project4/constant/constant.dart';
 
 class WatchInfoAndCount extends StatelessWidget {
-  const WatchInfoAndCount({super.key});
+  const WatchInfoAndCount({super.key, required this.watch});
+  final Watch watch;
 
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        const Column(
+        Column(
           children: [
             Text(
-              "watch name",
-              style: TextStyle(
+              watch.name,
+              style: const TextStyle(
                   fontFamily: "PlayfairDisplay",
                   color: appColorBlue,
                   fontWeight: FontWeight.w600,
@@ -21,8 +23,8 @@ class WatchInfoAndCount extends StatelessWidget {
             ),
             height10,
             Text(
-              "\$ watch price",
-              style: TextStyle(
+              "\$ ${watch.price.toString()}",
+              style: const TextStyle(
                   fontFamily: "PlayfairDisplay",
                   fontWeight: FontWeight.w600,
                   fontSize: 20),

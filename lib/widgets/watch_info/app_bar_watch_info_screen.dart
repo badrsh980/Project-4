@@ -6,7 +6,7 @@ PreferredSizeWidget AppBarWatchInfoScreen(BuildContext context) {
   return AppBar(
     centerTitle: true,
     title: const Text(
-      "name watch",
+      "watch",
       style: TextStyle(color: appColorBlue, fontWeight: FontWeight.w400),
     ),
     backgroundColor: appColorWhite,

@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:project4/Model/watch_product_model.dart';
 import 'package:project4/constant/constant.dart';
 
 class MoreDescriptionWatch extends StatelessWidget {
-  const MoreDescriptionWatch({super.key});
+  const MoreDescriptionWatch({
+    super.key,
+    required this.watch,
+  });
+  final Watch watch;
 
   @override
   Widget build(BuildContext context) {
