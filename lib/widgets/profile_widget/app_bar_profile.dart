@@ -8,7 +8,8 @@ PreferredSizeWidget AppBarWidget(BuildContext context, String title) {
       centerTitle: true,
       title: Text(
         title,
-        style: const TextStyle(color: appColorBlue),
+        style:
+            const TextStyle(color: appColorBlue, fontWeight: FontWeight.w400),
       ),
       backgroundColor: appColorWhite,
       elevation: 0,
