@@ -13,12 +13,13 @@ class Watch {
     required this.category,
   });
 
-  factory Watch.fromJason(Map json) {
+  factory Watch.fromJson(Map<String, dynamic> json) {
     return Watch(
-        picture: json['picture'],
-        name: json['name'],
-        title: json['title'],
-        price: json['price'].toDouble(),
-        category: json['category']);
+      picture: json['picture'],
+      name: json['name'],
+      title: json['title'],
+      price: json['price'].toDouble(),
+      category: List<String>.from(json['category']),
+    );
   }
 }
