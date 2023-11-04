@@ -18,10 +18,10 @@ void populateUserList() {
   }
 }
 
-void populateWatchList() {
-  for (var watchData in watchDataSets) {
-    Watch watch = Watch.fromJson(watchData);
-    tasksList.add(watch);
-    // Add the created watch to the global list
-  }
-}
+// void populateWatchList() {
+//   for (var watchData in watchDataSets) {
+//     Watch watch = Watch.fromJson(watchData);
+//     tasksList.add(watch);
+//     // Add the created watch to the global list
+//   }
+// }

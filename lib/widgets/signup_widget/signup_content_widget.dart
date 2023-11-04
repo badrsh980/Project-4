@@ -52,7 +52,7 @@ class SignUpContentWidget extends StatelessWidget {
             controller: fullNameController,
             labelText: "Full Name",
             hintText: "Enter Name Here ",
-            isObscureText: true,
+            isObscureText: false,
           ),
           //--------------------------------
           height30,

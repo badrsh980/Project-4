@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:project4/Data/gloable_data.dart';
 import 'package:project4/constant/constant.dart';
 
 class ShoppingCategories extends StatefulWidget {

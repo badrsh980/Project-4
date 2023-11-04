@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:project4/constant/constant.dart';
-import 'package:project4/screens/nav_bar_screen.dart';
 
 class ButtomWidget extends StatelessWidget {
   const ButtomWidget({
