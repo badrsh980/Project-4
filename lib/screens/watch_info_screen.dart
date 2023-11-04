@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:project4/constant/constant.dart';
-import 'package:project4/screens/order_screen.dart';
+import 'package:project4/widgets/watch_info/add_card_buttom.dart';
+import 'package:project4/widgets/watch_info/app_bar_watch_info_screen.dart';
+import 'package:project4/widgets/watch_info/watch_info_content.dart';
 
 class WatchInfoScreen extends StatelessWidget {
-  const WatchInfoScreen({super.key});
+  const WatchInfoScreen({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -11,42 +15,22 @@ class WatchInfoScreen extends StatelessWidget {
       child: Scaffold(
         resizeToAvoidBottomInset: false,
         backgroundColor: appColorWhite,
-        appBar: AppBar(
-          centerTitle: true,
-          title: const Text(
-            "name watch",
-            style: TextStyle(color: appColorBlue),
-          ),
-          backgroundColor: appColorWhite,
-          elevation: 0,
-          leading: IconButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            icon: const Icon(
-              Icons.arrow_back_ios_new_rounded,
-              color: appColorBlue,
+        appBar: AppBarWatchInfoScreen(context),
+        body: SizedBox(
+          height: MediaQuery.of(context).size.height,
+          width: MediaQuery.of(context).size.width,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Stack(
+              children: [
+                ListView(
+                  children: const [WatchInfoContent()],
+                ),
+                const AddCardButtom()
+              ],
             ),
           ),
-          actions: [
-            Padding(
-              padding: const EdgeInsets.only(right: 10),
-              child: IconButton(
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (builder) {
-                      return const OrderScreen();
-                    }));
-                  },
-                  icon: const Icon(
-                    Icons.shopping_bag_outlined,
-                    color: appColorBlue,
-                    size: 30,
-                  )),
-            )
-          ],
         ),
-        body: const Center(child: Text("watch info Screen")),
       ),
     );
   }
