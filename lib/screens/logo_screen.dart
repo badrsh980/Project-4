@@ -26,6 +26,7 @@ class LogoScreen extends StatelessWidget {
               swipeColorSecond: appColorDarkGrey,
               swipeColorTheird: appColorYellow,
             ),
+            
           ],
         ),
       ),

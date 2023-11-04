@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 
-class MyWidget extends StatelessWidget {
-  const MyWidget({super.key});
+class ProfileScreen extends StatelessWidget {
+  const ProfileScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return const SafeArea(
-      child: Scaffold(
-        body: Text("logo page"),
-      ),
+      child: Scaffold(body: Center(child: Text("Profile Screen")),),
     );
   }
 }
