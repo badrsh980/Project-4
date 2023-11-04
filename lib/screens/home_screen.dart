@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project4/Data/gloable_data.dart';
+import 'package:project4/Data/global.dart';
 import 'package:project4/Data/watch_datasets.dart';
 import 'package:project4/Model/watch_product_model.dart';
 import 'package:project4/constant/constant.dart';
@@ -17,9 +17,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
-    for (var element in watchDataSets) {
-      listWatch.add(Watch.fromJason(element));
-    }
+    populateWatchList();
     super.initState();
   }
 

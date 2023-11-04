@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project4/Data/gloable_data.dart';
+import 'package:project4/Data/global.dart';
 import 'package:project4/widgets/home_widget/display_all_watch.dart';
 
 class WatchView extends StatelessWidget {
