@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project4/constant/constant.dart';
+import 'package:project4/widgets/logo_widget/get_started_buttom.dart';
 
 class LogoPageView extends StatelessWidget {
   const LogoPageView(
@@ -76,7 +77,8 @@ class LogoPageView extends StatelessWidget {
                         color: swipeColorTheird, shape: BoxShape.circle),
                   )
                 ],
-              )
+              ),
+              const GetStartedButtom()
             ],
           ),
         )
