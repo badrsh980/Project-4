@@ -9,7 +9,7 @@ class DescriptionTextScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       descriptionScreen,
-      style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+      style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
     );
   }
 }

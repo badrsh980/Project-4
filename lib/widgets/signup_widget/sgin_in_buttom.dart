@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project4/constant/constant.dart';
 import 'package:project4/screens/login_screen.dart';
-import 'package:project4/screens/sign_up_screen.dart';
 
 class SignInButtom extends StatelessWidget {
   const SignInButtom({super.key});

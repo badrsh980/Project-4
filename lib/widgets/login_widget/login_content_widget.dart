@@ -26,14 +26,10 @@ class LoginContentWidget extends StatelessWidget {
           const FirstTextADSWatch(),
           //--------------------------------
           height40,
-          const TitleTextScreen(
-            titleScreen: "Let's Sign in",
-          ),
+          const TitleTextScreen(titleScreen: "Let's Sign in",),
           //---------------------------------
           height8,
-          const DescriptionTextScreen(
-            descriptionScreen: "Fill the details below to continue",
-          ),
+          const DescriptionTextScreen(descriptionScreen:  "Fill the details below to continue",),
           //---------------------------------
           height40,
           TextFieldWidget(
@@ -53,9 +49,7 @@ class LoginContentWidget extends StatelessWidget {
           //--------------------------------
           const ForgotPasswordText(),
           //---------------------------------
-          const ButtomWidget(
-            textButtom: 'Sign in',
-          ),
+          const ButtomWidget(textButtom: 'Sign in',),
           //---------------------------------
           height8,
           const Padding(

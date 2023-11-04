@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:project4/widgets/login_widget/description_text_screen.dart';
 import 'package:project4/widgets/login_widget/first_text_ADS_watch.dart';
-import 'package:project4/widgets/login_widget/forgot_password_text.dart';
-import 'package:project4/widgets/login_widget/google_sgin_in_buttom.dart';
 import 'package:project4/widgets/login_widget/sign_in_buttom.dart';
-import 'package:project4/widgets/login_widget/sign_up_buttom.dart';
 import 'package:project4/widgets/signup_widget/sgin_in_buttom.dart';
 import 'package:project4/widgets/text_field_widget.dart';
-
 import '../../constant/constant.dart';
 import '../login_widget/title_text_screen.dart';
 
@@ -65,10 +61,9 @@ class SignUpContentWidget extends StatelessWidget {
           const ButtomWidget(
             textButtom: 'Sign up',
           ),
+          //----------------------------------
           height32,
-          const SignInButtom(
-           
-          )
+          const SignInButtom()
         ],
       ),
     );

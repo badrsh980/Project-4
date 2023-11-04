@@ -1,5 +1,9 @@
 import 'package:dot_navigation_bar/dot_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:project4/screens/home_screen.dart';
+import 'package:project4/screens/order_screen.dart';
+import 'package:project4/screens/profile_screen.dart';
+import 'package:project4/screens/search_screen.dart';
 
 class NavBar extends StatefulWidget {
   @override
@@ -7,6 +11,15 @@ class NavBar extends StatefulWidget {
 }
 
 class _NavBar extends State<NavBar> with TickerProviderStateMixin {
+  List<Widget> listScreen = [
+    const HomeScreen(),
+    const SearchScreen(),
+    const OrderScreen(),
+    const ProfileScreen(),
+  ];
+
+  int index = 0;
+
   var _selectedTab = _SelectedTab.home;
 
   void _handleIndexChanged(int i) {
@@ -24,7 +37,7 @@ class _NavBar extends State<NavBar> with TickerProviderStateMixin {
     );
     return Scaffold(
       extendBody: true,
-      body: Container(),
+      body: listScreen[_SelectedTab.values.indexOf(_selectedTab)],
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.only(
           bottom: 10,
@@ -32,27 +45,27 @@ class _NavBar extends State<NavBar> with TickerProviderStateMixin {
         child: DotNavigationBar(
           margin: const EdgeInsets.symmetric(horizontal: 50),
           currentIndex: _SelectedTab.values.indexOf(_selectedTab),
-          dotIndicatorColor: Color(0xff273a67),
-          unselectedItemColor: Color(0xff10141d),
+          dotIndicatorColor: const Color(0xff273a67),
+          unselectedItemColor: const Color(0xff10141d),
           splashBorderRadius: 50,
-          backgroundColor: Color(0xfff8ce81),
+          backgroundColor: const Color(0xfff8ce81),
 
-          //enableFloatingNavBar: false,
+          //nableFloatingNavBar: false,
           onTap: _handleIndexChanged,
           items: [
             /// Home
             DotNavigationBarItem(
               icon: const Icon(Icons.home_outlined),
-              selectedColor: Color(0xff273a67),
-            ),
-
-            /// Likes
-            DotNavigationBarItem(
-              icon: const Icon(Icons.search_rounded),
-              selectedColor: Color(0xff273a67),
+              selectedColor: const Color(0xff273a67),
             ),
 
             /// Search
+            DotNavigationBarItem(
+              icon: const Icon(Icons.search_rounded),
+              selectedColor: const Color(0xff273a67),
+            ),
+
+            /// Order
             DotNavigationBarItem(
               icon: const Icon(Icons.shopping_bag_outlined),
               selectedColor: const Color(0xff273a67),
@@ -60,7 +73,7 @@ class _NavBar extends State<NavBar> with TickerProviderStateMixin {
 
             /// Profile
             DotNavigationBarItem(
-              icon: Icon(Icons.person_2_outlined),
+              icon: const Icon(Icons.person_2_outlined),
               selectedColor: const Color(0xff273a67),
             ),
           ],
