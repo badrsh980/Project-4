@@ -18,7 +18,7 @@ class LoginContentWidget extends StatelessWidget {
     TextEditingController passwordController = TextEditingController();
 
     return Padding(
-      padding: const EdgeInsets.only(top: 150, left: 20),
+      padding: const EdgeInsets.only(top: 150, left: 20, right: 20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

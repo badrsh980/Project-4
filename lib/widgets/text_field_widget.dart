@@ -23,7 +23,7 @@ class TextFieldWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(right: 20),
+      padding: const EdgeInsets.only(),
       child: TextField(
         controller: controller,
         obscureText: isObscureText,

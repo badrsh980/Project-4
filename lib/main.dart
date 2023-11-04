@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project4/screens/nav_bar_screen.dart';
+import 'package:project4/screens/logo_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,8 +10,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: NavBar(),
+    return const MaterialApp(
+      home: LogoScreen(),
     );
   }
 }

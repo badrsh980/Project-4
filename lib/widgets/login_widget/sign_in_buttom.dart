@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project4/constant/constant.dart';
-import 'package:project4/screens/home_screen.dart';
+import 'package:project4/screens/nav_bar_screen.dart';
 
 class ButtomWidget extends StatelessWidget {
   const ButtomWidget({super.key, required this.textButtom});
@@ -10,7 +10,9 @@ class ButtomWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 20, right: 20),
+      padding: const EdgeInsets.only(
+        top: 20,
+      ),
       child: Center(
         child: InkWell(
           onTap: () {
@@ -18,7 +20,7 @@ class ButtomWidget extends StatelessWidget {
               context,
               MaterialPageRoute(
                 builder: (context) {
-                  return const HomeScreen();
+                  return NavBar();
                 },
               ),
             );
@@ -33,7 +35,7 @@ class ButtomWidget extends StatelessWidget {
             child: Center(
                 child: Text(
               textButtom,
-              style: TextStyle(fontSize: 15, color: appColorBlue),
+              style: const TextStyle(fontSize: 15, color: appColorBlue),
             )),
           ),
         ),
