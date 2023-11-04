@@ -10,7 +10,9 @@ class ButtomWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 20, right: 20),
+      padding: const EdgeInsets.only(
+        top: 20,
+      ),
       child: Center(
         child: InkWell(
           onTap: () {

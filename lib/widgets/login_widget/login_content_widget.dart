@@ -18,7 +18,7 @@ class LoginContentWidget extends StatelessWidget {
     TextEditingController passwordController = TextEditingController();
 
     return Padding(
-      padding: const EdgeInsets.only(top: 150, left: 20),
+      padding: const EdgeInsets.only(top: 150, left: 20, right: 20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -26,10 +26,14 @@ class LoginContentWidget extends StatelessWidget {
           const FirstTextADSWatch(),
           //--------------------------------
           height40,
-          const TitleTextScreen(titleScreen: "Let's Sign in",),
+          const TitleTextScreen(
+            titleScreen: "Let's Sign in",
+          ),
           //---------------------------------
           height8,
-          const DescriptionTextScreen(descriptionScreen:  "Fill the details below to continue",),
+          const DescriptionTextScreen(
+            descriptionScreen: "Fill the details below to continue",
+          ),
           //---------------------------------
           height40,
           TextFieldWidget(
@@ -49,7 +53,9 @@ class LoginContentWidget extends StatelessWidget {
           //--------------------------------
           const ForgotPasswordText(),
           //---------------------------------
-          const ButtomWidget(textButtom: 'Sign in',),
+          const ButtomWidget(
+            textButtom: 'Sign in',
+          ),
           //---------------------------------
           height8,
           const Padding(

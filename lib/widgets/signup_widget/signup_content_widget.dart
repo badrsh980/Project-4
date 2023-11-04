@@ -14,9 +14,10 @@ class SignUpContentWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     TextEditingController usernameController = TextEditingController();
     TextEditingController passwordController = TextEditingController();
+    TextEditingController fullNameController = TextEditingController();
 
     return Padding(
-      padding: const EdgeInsets.only(top: 150, left: 20),
+      padding: const EdgeInsets.only(top: 150, left: 20, right: 20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -43,7 +44,7 @@ class SignUpContentWidget extends StatelessWidget {
           //--------------------------------
           height30,
           TextFieldWidget(
-            controller: passwordController,
+            controller: fullNameController,
             labelText: "Full Name",
             hintText: "Enter Name Here ",
             isObscureText: true,

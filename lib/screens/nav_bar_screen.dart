@@ -1,5 +1,6 @@
 import 'package:dot_navigation_bar/dot_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:project4/constant/constant.dart';
 import 'package:project4/screens/home_screen.dart';
 import 'package:project4/screens/order_screen.dart';
 import 'package:project4/screens/profile_screen.dart';
@@ -36,6 +37,8 @@ class _NavBar extends State<NavBar> with TickerProviderStateMixin {
       duration: const Duration(milliseconds: 300),
     );
     return Scaffold(
+      backgroundColor: appColorWhite,
+      resizeToAvoidBottomInset: false,
       extendBody: true,
       body: listScreen[_SelectedTab.values.indexOf(_selectedTab)],
       bottomNavigationBar: Padding(
