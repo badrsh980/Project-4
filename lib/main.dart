@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:project4/screens/logo_screen.dart';
+import 'package:project4/screens/nav_bar_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: LogoScreen());
+    return MaterialApp(
+      home: NavBar(),
+    );
   }
 }
