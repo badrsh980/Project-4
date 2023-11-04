@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project4/constant/constant.dart';
-import 'package:project4/widgets/app_bar_widget.dart';
+import 'package:project4/widgets/profile_widget/app_bar_profile.dart';
 import 'package:project4/widgets/profile_widget/profile_content_widget.dart';
 
 class ProfileScreen extends StatelessWidget {
