@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project4/constant/constant.dart';
 
-import 'package:flutter/material.dart';
-import 'package:project4/constant/constant.dart';
-
 class TextFieldWidget extends StatefulWidget {
   const TextFieldWidget({
     Key? key,
