@@ -1,18 +1,18 @@
 class User {
-  final String img;
-  final String fullName;
-  final String username;
-  final String mobileNumber;
-  final String emailAddress;
-  final String password;
+  String? img;
+  String? fullName;
+  String? username;
+  String? mobileNumber;
+  String? emailAddress;
+  String? password;
 
   User({
-    required this.img,
-    required this.fullName,
-    required this.username,
-    required this.mobileNumber,
-    required this.emailAddress,
-    required this.password,
+    this.img,
+    this.fullName,
+    this.username,
+    this.mobileNumber,
+    this.emailAddress,
+    this.password,
   });
 
   factory User.fromJson(Map<String, dynamic> json) {

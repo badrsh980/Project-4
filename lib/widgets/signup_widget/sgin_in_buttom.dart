@@ -12,20 +12,21 @@ class SignInButtom extends StatelessWidget {
       children: [
         const Text("Joined us befor?"),
         TextButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) {
-                    return const LoginScreen();
-                  },
-                ),
-              );
-            },
-            child: const Text(
-              "Sign in",
-              style: TextStyle(color: appColorBlue),
-            )),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) {
+                  return const LoginScreen();
+                },
+              ),
+            );
+          },
+          child: Text(
+            "Sign in",
+            style: TextStyle(color: appColorBlue),
+          ),
+        ),
       ],
     );
   }

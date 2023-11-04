@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:project4/Data/global.dart';
 import 'package:project4/constant/constant.dart';
+import 'package:project4/screens/nav_bar_screen.dart';
 import 'package:project4/widgets/login_widget/first_text_ADS_watch.dart';
 import 'package:project4/widgets/login_widget/forgot_password_text.dart';
 import 'package:project4/widgets/login_widget/google_sgin_in_buttom.dart';
@@ -18,7 +20,7 @@ class LoginContentWidget extends StatelessWidget {
     TextEditingController passwordController = TextEditingController();
 
     return Padding(
-      padding: const EdgeInsets.only(top: 150, left: 20, right: 20),
+      padding: const EdgeInsets.only(top: 150, left: 20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -53,10 +55,31 @@ class LoginContentWidget extends StatelessWidget {
           //--------------------------------
           const ForgotPasswordText(),
           //---------------------------------
-          const ButtomWidget(
+          ButtomWidget(
             textButtom: 'Sign in',
+            onPressed: () {
+              populateUserList();
+              for (var user in userList) {
+                if (user.username == usernameController.text &&
+                    user.password == passwordController.text) {
+                  currentUser = user;
+                  Navigator.pushAndRemoveUntil(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => NavBar(),
+                    ),
+                    (route) => false,
+                  );
+                  return;
+                }
+              }
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(
+                  content: Text("email or password are incorrect"),
+                ),
+              );
+            },
           ),
-          //---------------------------------
           height8,
           const Padding(
             padding: EdgeInsets.only(left: 175),

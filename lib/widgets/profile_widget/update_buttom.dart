@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:project4/constant/constant.dart';
 
 class UpdateButtom extends StatelessWidget {
-  const UpdateButtom({super.key});
+  final VoidCallback onPressed;
+
+  const UpdateButtom({required this.onPressed, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -10,7 +12,7 @@ class UpdateButtom extends StatelessWidget {
       padding: const EdgeInsets.only(top: 10),
       child: Center(
         child: InkWell(
-          onTap: () {},
+          onTap: onPressed, // Call the provided onPressed callback when tapped
           child: Container(
             height: 50,
             width: 350,
@@ -19,10 +21,11 @@ class UpdateButtom extends StatelessWidget {
               borderRadius: BorderRadius.circular(10),
             ),
             child: const Center(
-                child: Text(
-              "Update",
-              style: TextStyle(fontSize: 15),
-            )),
+              child: Text(
+                "Update",
+                style: TextStyle(fontSize: 15),
+              ),
+            ),
           ),
         ),
       ),

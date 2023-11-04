@@ -52,7 +52,6 @@ class _NavBar extends State<NavBar> with TickerProviderStateMixin {
           unselectedItemColor: const Color(0xff10141d),
           splashBorderRadius: 50,
           backgroundColor: const Color(0xfff8ce81),
-
           //nableFloatingNavBar: false,
           onTap: _handleIndexChanged,
           items: [
