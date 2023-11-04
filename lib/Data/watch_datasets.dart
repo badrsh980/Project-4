@@ -1,4 +1,4 @@
-List<Map<String, dynamic>> watchDataSets = [
+List<Map> watchDataSets = [
   {
     "picture": "assets/images/watches/watch1.jpg",
     "name": "Watch Model 1",
