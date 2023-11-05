@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project4/constant/constant.dart';
+import 'package:project4/screens/filter_screen.dart';
 
 PreferredSizeWidget AppBarHomeScreen(BuildContext context) {
   return AppBar(
@@ -26,7 +27,11 @@ PreferredSizeWidget AppBarHomeScreen(BuildContext context) {
     ),
     actions: [
       IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) {
+              return const FilterScreen();
+            }));
+          },
           icon: const Icon(
             Icons.filter_list_rounded,
             color: appColorBlue,
