@@ -9,6 +9,8 @@ class LogoScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        resizeToAvoidBottomInset: false,
+        backgroundColor: appColorWhite,
         body: PageView(
           children: const [
             LogoPageView(
@@ -26,7 +28,6 @@ class LogoScreen extends StatelessWidget {
               swipeColorSecond: appColorDarkGrey,
               swipeColorTheird: appColorYellow,
             ),
-            
           ],
         ),
       ),
