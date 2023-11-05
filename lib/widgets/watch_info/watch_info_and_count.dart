@@ -2,10 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:project4/Model/watch_product_model.dart';
 import 'package:project4/constant/constant.dart';
 
-class WatchInfoAndCount extends StatelessWidget {
-  const WatchInfoAndCount({super.key, required this.watch});
+class WatchInfoAndCount extends StatefulWidget {
+  const WatchInfoAndCount({Key? key, required this.watch}) : super(key: key);
   final Watch watch;
 
+  @override
+  _WatchInfoAndCountState createState() => _WatchInfoAndCountState();
+}
+
+class _WatchInfoAndCountState extends State<WatchInfoAndCount> {
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -14,7 +19,7 @@ class WatchInfoAndCount extends StatelessWidget {
         Column(
           children: [
             Text(
-              watch.name,
+              widget.watch.name,
               style: const TextStyle(
                   fontFamily: "PlayfairDisplay",
                   color: appColorBlue,
@@ -22,13 +27,17 @@ class WatchInfoAndCount extends StatelessWidget {
                   fontSize: 25),
             ),
             height10,
-            Text(
-              "\$ ${watch.price.toString()}",
-              style: const TextStyle(
-                  fontFamily: "PlayfairDisplay",
-                  fontWeight: FontWeight.w600,
-                  fontSize: 20),
-            )
+            Row(
+              children: [
+                Text(
+                  "\$ ${(widget.watch.price * (widget.watch.count ?? 0)).toStringAsFixed(2)}",
+                  style: const TextStyle(
+                      fontFamily: "PlayfairDisplay",
+                      fontWeight: FontWeight.w600,
+                      fontSize: 20),
+                ),
+              ],
+            ),
           ],
         ),
         SizedBox(
@@ -42,24 +51,37 @@ class WatchInfoAndCount extends StatelessWidget {
                 decoration: const BoxDecoration(
                     color: appColorYellow, shape: BoxShape.circle),
                 child: IconButton(
-                    onPressed: () {},
-                    icon: const Icon(
-                      Icons.remove,
-                      color: appColorBlue,
-                    )),
+                  onPressed: () {
+                    setState(() {
+                      if (widget.watch.count != null &&
+                          widget.watch.count! > 0) {
+                        widget.watch.count = (widget.watch.count! - 1).toInt();
+                      }
+                    });
+                  },
+                  icon: const Icon(
+                    Icons.remove,
+                    color: appColorBlue,
+                  ),
+                ),
               ),
-              const Text("1"),
+              Text((widget.watch.count ?? 0).toString()),
               Container(
                 height: 40,
                 width: 40,
                 decoration: const BoxDecoration(
                     color: appColorYellow, shape: BoxShape.circle),
                 child: IconButton(
-                    onPressed: () {},
-                    icon: const Icon(
-                      Icons.add,
-                      color: appColorBlue,
-                    )),
+                  onPressed: () {
+                    setState(() {
+                      widget.watch.count = (widget.watch.count ?? 0) + 1;
+                    });
+                  },
+                  icon: const Icon(
+                    Icons.add,
+                    color: appColorBlue,
+                  ),
+                ),
               ),
             ],
           ),

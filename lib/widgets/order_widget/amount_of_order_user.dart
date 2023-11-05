@@ -8,7 +8,7 @@ class AmountOfOrderContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return SizedBox
         height: 400,
         width: MediaQuery.of(context).size.width,
         child: ListView.builder(

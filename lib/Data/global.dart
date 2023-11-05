@@ -6,9 +6,19 @@ import 'package:project4/Model/watch_product_model.dart';
 // Define and initialize the global lists
 List<User> userList = [];
 List<Watch> listWatch = [];
+List<Watch> orderWatch = [];
 
 late User currentUser;
 late Watch currentWatch;
+double globalPrice = 0;
+
+void calculateGlobalPrice() {
+  globalPrice = 0;
+  for (var element in orderWatch) {
+    globalPrice += element.count! * (element.price);
+  }
+  print(globalPrice);
+}
 
 void populateUserList() {
   for (var userData in userDataSets) {
