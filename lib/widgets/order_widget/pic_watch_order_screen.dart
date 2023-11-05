@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:project4/Data/global.dart';
+import 'package:project4/Model/watch_product_model.dart';
 import 'package:project4/constant/constant.dart';
 
 class PicWatchOrderScreen extends StatelessWidget {
-  const PicWatchOrderScreen({super.key});
+  const PicWatchOrderScreen({super.key, required this.product});
+  final Watch product; // The product to add to the cart
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +32,7 @@ class PicWatchOrderScreen extends StatelessWidget {
           left: 10,
           child: Center(
               child: Image.asset(
-            "assets/images/watches/watch2.jpg",
+            product.picture,
             height: 70,
             width: 70,
           )),
