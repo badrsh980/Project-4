@@ -1,5 +1,3 @@
-import 'package:project4/Model/watch_product_model.dart';
-
 class User {
   String? img;
   String? fullName;
