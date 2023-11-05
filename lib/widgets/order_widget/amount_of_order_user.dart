@@ -8,29 +8,33 @@ class AmountOfOrderContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 400,
-      width: MediaQuery.of(context).size.width,
-      child: const SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        child: Column(
-          children: [
-            Padding(
-              padding: EdgeInsets.symmetric(vertical: 10),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  PicWatchOrderScreen(),
-                  WatchInfoOrderScreen(),
-                  AddOrRemoveOrderScreen(),
+    return SizedBox
+        height: 400,
+        width: MediaQuery.of(context).size.width,
+        child: ListView.builder(
+          itemCount: 6,
+          scrollDirection: Axis.vertical,
+          itemBuilder: (BuildContext context, int index) {
+            return oreders(3);
+          },
+        ));
+  }
 
-                  //
-                ],
-              ),
-            ),
-          ],
+  oreders(int i) {
+    return const Column(
+      children: [
+        Padding(
+          padding: EdgeInsets.symmetric(vertical: 10),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              PicWatchOrderScreen(),
+              WatchInfoOrderScreen(),
+              AddOrRemoveOrderScreen(),
+            ],
+          ),
         ),
-      ),
+      ],
     );
   }
 }

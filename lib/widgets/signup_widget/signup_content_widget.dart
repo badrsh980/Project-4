@@ -45,6 +45,10 @@ class SignUpContentWidget extends StatelessWidget {
             labelText: "Username or Email",
             hintText: "Enter Username or Email",
             isObscureText: false,
+            hasSuffix: Icon(
+              Icons.email_outlined,
+              color: appColorGrey,
+            ),
           ),
           //--------------------------------
           height30,
@@ -53,6 +57,10 @@ class SignUpContentWidget extends StatelessWidget {
             labelText: "Full Name",
             hintText: "Enter Name Here ",
             isObscureText: false,
+            hasSuffix: Icon(
+              Icons.person_outline,
+              color: appColorGrey,
+            ),
           ),
           //--------------------------------
           height30,
@@ -61,6 +69,10 @@ class SignUpContentWidget extends StatelessWidget {
             labelText: "Password",
             hintText: "Enter Password ",
             isObscureText: true,
+            hasSuffix: Icon(
+              Icons.remove_red_eye_outlined,
+              color: appColorGrey,
+            ),
           ),
           //---------------------------------
           height14,

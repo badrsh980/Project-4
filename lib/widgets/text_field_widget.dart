@@ -36,29 +36,32 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(),
-      child: TextField(
-        controller: widget.controller,
-        obscureText: widget.isObscureText,
-        decoration: InputDecoration(
-          labelText: widget.labelText,
-          labelStyle: const TextStyle(
-            color: appColorDarkGrey,
+        padding: const EdgeInsets.only(),
+        child: TextField(
+          controller: widget.controller,
+          obscureText: widget.isObscureText,
+          decoration: InputDecoration(
+            suffixIcon: widget.hasSuffix,
+            
+            contentPadding: EdgeInsets.only(left: 25),
+            labelText: widget.labelText,
+            labelStyle: const TextStyle(
+              color: appColorDarkGrey,
+            ),
+            hintText: widget.hintText,
+            hintStyle:
+                const TextStyle(color: Color.fromARGB(58, 143, 143, 143)),
+            filled: true,
+            fillColor: const Color.fromARGB(153, 255, 255, 255),
+            enabledBorder: OutlineInputBorder(
+              borderSide: const BorderSide(color: appColorDarkWhite),
+              borderRadius: BorderRadius.circular(15),
+            ),
+            focusedBorder: OutlineInputBorder(
+              borderSide: const BorderSide(color: appColorDarkWhite),
+              borderRadius: BorderRadius.circular(15),
+            ),
           ),
-          hintText: widget.hintText,
-          hintStyle: const TextStyle(color: Color.fromARGB(58, 143, 143, 143)),
-          filled: true,
-          fillColor: const Color.fromARGB(153, 255, 255, 255),
-          enabledBorder: OutlineInputBorder(
-            borderSide: const BorderSide(color: appColorDarkWhite),
-            borderRadius: BorderRadius.circular(15),
-          ),
-          focusedBorder: OutlineInputBorder(
-            borderSide: const BorderSide(color: appColorDarkWhite),
-            borderRadius: BorderRadius.circular(15),
-          ),
-        ),
-      ),
-    );
+        ));
   }
 }
