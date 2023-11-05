@@ -1,5 +1,6 @@
 import 'package:dot_navigation_bar/dot_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:project4/Model/watch_product_model.dart';
 import 'package:project4/constant/constant.dart';
 import 'package:project4/screens/home_screen.dart';
 import 'package:project4/screens/order_screen.dart';
@@ -15,7 +16,16 @@ class _NavBar extends State<NavBar> with TickerProviderStateMixin {
   List<Widget> listScreen = [
     const HomeScreen(),
     const SearchScreen(),
-    const OrderScreen(),
+    OrderScreen(
+        product: Watch(
+      // Provide a valid Watch object here
+      picture: "assets/images/watches/watch1.jpg",
+      name: "Watch Model 1",
+      title: "Elegant Chronograph Watch",
+      price: 1919.99,
+      count: 0,
+      category: ["Elegant"],
+    )),
     const ProfileScreen(),
   ];
 

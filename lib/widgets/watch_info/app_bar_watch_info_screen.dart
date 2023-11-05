@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:project4/constant/constant.dart';
 import 'package:project4/screens/order_screen.dart';
+import 'package:project4/Model/watch_product_model.dart';
 
-PreferredSizeWidget AppBarWatchInfoScreen(BuildContext context) {
+PreferredSizeWidget AppBarWatchInfoScreen(BuildContext context, Watch product) {
   return AppBar(
     centerTitle: true,
     title: const Text(
-      "watch",
+      "Watch",
       style: TextStyle(color: appColorBlue, fontWeight: FontWeight.w400),
     ),
     backgroundColor: appColorWhite,
@@ -24,16 +25,17 @@ PreferredSizeWidget AppBarWatchInfoScreen(BuildContext context) {
       Padding(
         padding: const EdgeInsets.only(right: 10),
         child: IconButton(
-            onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (builder) {
-                return const OrderScreen();
-              }));
-            },
-            icon: const Icon(
-              Icons.shopping_bag_outlined,
-              color: appColorBlue,
-              size: 30,
-            )),
+          onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (builder) {
+              return OrderScreen(product: product);
+            }));
+          },
+          icon: const Icon(
+            Icons.shopping_bag_outlined,
+            color: appColorBlue,
+            size: 30,
+          ),
+        ),
       )
     ],
   );
