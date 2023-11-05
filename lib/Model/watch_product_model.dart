@@ -5,12 +5,15 @@ class Watch {
   final double price;
   final List<String> category;
 
+  int? count;
+
   Watch({
     required this.picture,
     required this.name,
     required this.title,
     required this.price,
     required this.category,
+    this.count,
   });
 
   factory Watch.fromJson(Map<String, dynamic> json) {
@@ -19,6 +22,7 @@ class Watch {
       name: json['name'],
       title: json['title'],
       price: json['price'].toDouble(),
+      count: json['count'],
       category: List<String>.from(json['category']),
     );
   }

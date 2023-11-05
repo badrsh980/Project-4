@@ -12,9 +12,14 @@ class AddCardButtom extends StatelessWidget {
       bottom: 30,
       child: InkWell(
         onTap: () {
-          Navigator.push(context, MaterialPageRoute(builder: (builder) {
-            return const OrderScreen();
-          }));
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (builder) {
+                return const OrderScreen();
+              },
+            ),
+          );
         },
         child: Container(
             height: 50,

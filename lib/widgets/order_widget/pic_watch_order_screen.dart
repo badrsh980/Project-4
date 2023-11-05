@@ -30,7 +30,7 @@ class PicWatchOrderScreen extends StatelessWidget {
           left: 10,
           child: Center(
               child: Image.asset(
-            "assets/images/watches/watch3.jpg",
+            "assets/images/watches/watch2.jpg",
             height: 70,
             width: 70,
           )),
