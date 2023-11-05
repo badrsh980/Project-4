@@ -20,10 +20,9 @@ class AmountOfOrderContainer extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                 PicWatchOrderScreen(),
-                 WatchInfoOrderScreen(),
-                 AddOrRemoveOrderScreen(),
-
+                  PicWatchOrderScreen(),
+                  WatchInfoOrderScreen(),
+                  AddOrRemoveOrderScreen(),
                 ],
               ),
             ),

@@ -20,7 +20,7 @@ class LoginContentWidget extends StatelessWidget {
     TextEditingController passwordController = TextEditingController();
 
     return Padding(
-      padding: const EdgeInsets.only(top: 150, left: 20),
+      padding: const EdgeInsets.only(top: 150, left: 20, right: 20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -43,6 +43,10 @@ class LoginContentWidget extends StatelessWidget {
             labelText: "Username or Email",
             hintText: "Enter Username or Email",
             isObscureText: false,
+            hasSuffix: Icon(
+              Icons.email_outlined,
+              color: appColorGrey,
+            ),
           ),
           //--------------------------------
           height30,
@@ -51,6 +55,10 @@ class LoginContentWidget extends StatelessWidget {
             labelText: "Password",
             hintText: "Enter Password ",
             isObscureText: true,
+            hasSuffix: Icon(
+              Icons.remove_red_eye_outlined,
+              color: appColorGrey,
+            ),
           ),
           //--------------------------------
           const ForgotPasswordText(),
