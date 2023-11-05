@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:project4/Data/global.dart';
 import 'package:project4/constant/constant.dart';
 import 'package:project4/widgets/home_widget/app_bar_home_screen.dart';
+import 'package:project4/widgets/home_widget/container_Topfive.dart';
 import 'package:project4/widgets/home_widget/shopping_categories.dart';
 import 'package:project4/widgets/home_widget/watch_view.dart';
 
@@ -53,7 +54,33 @@ class _HomeScreenState extends State<HomeScreen> {
                 //----------------------------
                 ShoppingCategories(),
                 //----------------------------
-                WatchView()
+                WatchView(),
+                height28,
+                Padding(
+                  padding: EdgeInsets.only(left: 10, right: 50),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Top Five",
+                        style: TextStyle(
+                            fontFamily: 'PlayfairDisplay',
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20,
+                            color: appColorBlue),
+                      ),
+                      Text(
+                        "View All",
+                        style: TextStyle(
+                            fontFamily: 'PlayfairDisplay',
+                            fontWeight: FontWeight.w500,
+                            color: appColorGrey),
+                      )
+                    ],
+                  ),
+                ),
+                height28,
+                ContainerTopFive()
               ],
             ),
           ),
